@@ -2,7 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -11,37 +11,116 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: lightgray;
 }
 
 main {
     min-width: 600px;
     max-width: 1000px;
     width: 80%;
-}
-
-#pomodoro-menu {
-    display: flex;
-    justify-content: space-around;
-}
-
-#pomodoro-menu button {
-    width: 30%;
-}
-
-#timer {
-    display: flex;
-    flex-direction: column;
-}
-
-#timer>h1 {
-    text-align: center;
-    font-size: 100px;
+    background: dimgray;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 button {
-    cursor: pointer;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: red;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#menu button {
+    width: 30%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer>.duration {
+    text-align: center;
+    font-size: 100px;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.timer button {
+    width: 90%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+#pomodoro-duration {
+    color: lightblue;
+
+}
+
+#pomodoro-btn {
+    background-color: lightblue;
+
+}
+
+#shortbreak-duration {
+    color: orange;
+}
+
+#shortbreak-btn {
+    background-color: orange;
+}
+
+#longbreak-duration {
+    color: rgb(228, 145, 228);
+}
+
+#longbreak-btn {
+    background-color: rgb(228, 145, 228);
+}
+
+.start-btn {
+    background: lightgreen;
+}
+
+.pause-btn {
+    background: lightcoral;
+}
+
+.reset-btn {
+    background: lightgoldenrodyellow;
+}
+
+
+#count {
+    margin-top: 15px;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }

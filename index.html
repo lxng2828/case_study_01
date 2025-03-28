@@ -10,16 +10,32 @@
 
 <body>
     <main>
-        <section id="pomodoro">
-            <nav id="pomodoro-menu">
-                menu
+        <section id="main">
+            <nav id="menu">
+                <button id="pomodoro-btn">Pomodoro</button>
+                <button id="shortbreak-btn">Short Break</button>
+                <button id="longbreak-btn">Long Break</button>
             </nav>
 
-            <div id="timer">
-                <h1 id="result">25:00</h1>
-                <button id="start-btn">START</button>
-                <button id="pause-btn">PAUSE</button>
-                <button id="reset-btn">RESET</button>
+            <div id="pomodoro" class="timer">
+                <input type="text" id="pomodoro-duration" class="duration" value="25:00" disabled>
+                <button id="pomodoro-start-btn" class="start-btn">START</button>
+                <button id="pomodoro-pause-btn" class="pause-btn">PAUSE</button>
+                <button id="pomodoro-reset-btn" class="reset-btn">RESET</button>
+            </div>
+
+            <div id="shortbreak" class="timer" style="display: none;">
+                <input type="text" id="shortbreak-duration" class="duration" value="05:00" disabled>
+                <button id="shortbreak-start-btn" class="start-btn">START</button>
+                <button id="shortbreak-pause-btn" class="pause-btn">PAUSE</button>
+                <button id="shortbreak-reset-btn" class="reset-btn">RESET</button>
+            </div>
+
+            <div id="longbreak" class="timer" style="display: none;">
+                <input type="text" id="longbreak-duration" class="duration" value="15:00" disabled>
+                <button id="longbreak-start-btn" class="start-btn">START</button>
+                <button id="longbreak-pause-btn" class="pause-btn">PAUSE</button>
+                <button id="longbreak-reset-btn" class="reset-btn">RESET</button>
             </div>
 
             <div id="count">count</div>

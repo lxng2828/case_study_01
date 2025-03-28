@@ -21,9 +21,9 @@ class TimerManager {
         let minutes = Math.floor(seconds / 60);
         let secs = seconds % 60;
         if (secs < 10) {
-            this.result.innerText = `${minutes}:0${secs}`;
+            this.result.value = `${minutes}:0${secs}`;
         } else {
-            this.result.innerText = `${minutes}:${secs}`;
+            this.result.value = `${minutes}:${secs}`;
         }
     }
 }
