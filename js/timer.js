@@ -4,7 +4,7 @@ class Timer {
         this.countdownLeft = countdownTime;
         this.interval = null;
     }
-    start() {
+    start(updateFunction) {
         if (this.interval) {
             return;
         }
@@ -13,22 +13,23 @@ class Timer {
             if (this.countdownLeft > 0) {
                 this.countdownLeft--;
                 console.log(this.countdownLeft)
-                updateCallback(this.countdownLeft);
+                updateFunction(this.countdownLeft);
             } else {
                 this.stop();
-                console.log("Time's up!");
+                console.log("timesup!");
             }
         }, 1000);
     }
     stop() {
         clearInterval(this.interval);
         this.interval = null;
-        console.log("da dung roi")
+        console.log("stop")
     }
-    reset() {
+    reset(updateFunction) {
         this.stop();
-        this.countdownLeft = countdownTime;
-        updateCallback(this.countdownLeft);
+        this.countdownLeft = this.countdownTime;
+        updateFunction(this.countdownLeft);
+        console.log("reset")
     }
 }
 

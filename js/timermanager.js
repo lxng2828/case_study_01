@@ -28,7 +28,4 @@ class TimerManager {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    let timer = new Timer(1500);
-    new TimerManager("result", "start-btn", "pause-btn", "reset-btn", timer);
-});
+export default TimerManager;
