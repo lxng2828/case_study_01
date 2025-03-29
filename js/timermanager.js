@@ -7,7 +7,6 @@ class TimerManager {
         this.pauseBtn = document.getElementById(pauseBtnId);
         this.resetBtn = document.getElementById(resetBtnId);
         this.timer = timer;
-        this.formattedTime = "";
 
         this.startBtn.addEventListener("click", () => this.timer.start(this.updateTimer.bind(this)));
         this.pauseBtn.addEventListener("click", () => this.timer.stop());

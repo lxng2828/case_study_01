@@ -17,6 +17,8 @@ class Timer {
             } else {
                 this.stop();
                 console.log("timesup!");
+                const bell = new Audio("./assets/bell.mp3")
+                bell.play();
             }
         }, 1000);
     }

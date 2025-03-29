@@ -11,26 +11,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
+    background-color: #f4f4f9;
 }
 
 main {
     min-width: 600px;
     max-width: 1000px;
     width: 80%;
-    background: dimgray;
+    background: #3a3d5a;
     padding: 20px;
     border-radius: 10px;
 }
 
 button {
-    color: black;
-    border: 2px solid black;
+    color: white;
+    border: 2px solid #ffffff;
     border-radius: 5px;
+    background-color: #4a4e69;
 }
 
 button:hover {
-    border: 2px solid lightblue;
+    border: 2px solid #00b4d8;
     border-radius: 5px;
 }
 
@@ -41,6 +42,8 @@ button:hover {
     border-radius: 5px;
     margin-bottom: 15px;
     font-weight: bold;
+    background-color: #22223b;
+    color: white;
 }
 
 #menu button {
@@ -62,9 +65,7 @@ button:hover {
     text-align: center;
     font-size: 100px;
     background: transparent;
-    color: white;
-    border: none;
-    outline: none;
+    color: #f8f9fa;
     width: 100%;
 }
 
@@ -74,48 +75,43 @@ button:hover {
     cursor: pointer;
     font-size: 25px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-
 #pomodoro-duration {
-    color: lightblue;
-
+    color: #00b4d8;
 }
 
 #pomodoro-btn {
-    background-color: lightblue;
-
+    background-color: #00b4d8;
 }
 
 #shortbreak-duration {
-    color: orange;
+    color: #f77f00;
 }
 
 #shortbreak-btn {
-    background-color: orange;
+    background-color: #f77f00;
 }
 
 #longbreak-duration {
-    color: rgb(228, 145, 228);
+    color: #be82e9;
 }
 
 #longbreak-btn {
-    background-color: rgb(228, 145, 228);
+    background-color: #be82e9;
 }
 
 .start-btn {
-    background: lightgreen;
+    background: #38b000;
 }
 
 .pause-btn {
-    background: lightcoral;
+    background: #d90429;
 }
 
 .reset-btn {
-    background: lightgoldenrodyellow;
+    background: #ffd60a;
 }
-
 
 #count {
     margin-top: 15px;

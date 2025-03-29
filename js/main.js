@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    let pomodoro = new Timer(1500);
+    let pomodoro = new Timer(15);
     new TimerManager("pomodoro-duration", "pomodoro-start-btn", "pomodoro-pause-btn", "pomodoro-reset-btn", pomodoro);
 
-    let shortbreak = new Timer(300);
+    let shortbreak = new Timer(3);
     new TimerManager("shortbreak-duration", "shortbreak-start-btn", "shortbreak-pause-btn", "shortbreak-reset-btn", shortbreak);
 
 
-    let longbreak = new Timer(900);
+    let longbreak = new Timer(9);
     new TimerManager("longbreak-duration", "longbreak-start-btn", "longbreak-pause-btn", "longbreak-reset-btn", longbreak);
 });
