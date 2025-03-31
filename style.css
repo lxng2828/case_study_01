@@ -82,7 +82,7 @@ button:hover {
 
 #menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px;
     margin-bottom: 15px;
     font-weight: bold;
@@ -91,7 +91,7 @@ button:hover {
 }
 
 #menu button {
-    width: 30%;
+    width: 23%;
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
@@ -163,4 +163,43 @@ button:hover {
     color: white;
     font-weight: bold;
     text-align: center;
+}
+
+#stopwatch-btn {
+    background-color: #a35858;
+}
+
+#stopwatch {
+    padding: 20px;
+}
+
+#stopwatch button {
+    background-color: #a35858;
+}
+
+#laps {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100%;
+    overflow: auto;
+}
+
+#laps p {
+    text-align: start;
+    font-size: 16px;
+    color: #f8f9fa;
+    width: 25%;
+    height: 25%;
+}
+
+#display {
+    height: 60px;
+    text-align: center;
+    font-size: 60px;
+    background: transparent;
+    color: #f8f9fa;
+    width: 100%;
 }

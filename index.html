@@ -24,6 +24,7 @@
                 <button id="pomodoro-btn">Pomodoro</button>
                 <button id="shortbreak-btn">Short Break</button>
                 <button id="longbreak-btn">Long Break</button>
+                <button id="stopwatch-btn">Stopwatch</button>
             </nav>
 
             <div id="pomodoro" class="timer">
@@ -47,7 +48,22 @@
                 <button id="longbreak-reset-btn" class="reset-btn">RESET</button>
             </div>
 
-            <div id="count">count</div>
+            <div id="stopwatch" class="timer" style="display: none;">
+                <div id="display"></div>
+                <div id="laps"></div>
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+                <button id="lapBtn">Lap</button>
+            </div>
+
+            <div id="count">
+                <h5>Pomodoro counter : <span id="pomodoro-c">0</span></h5>
+                <h5>Shortbreak counter : <span id="shortbreak-c">0</span></h5>
+                <h5>Longbreak counter : <span id="longbreak-c">0</span></h5>
+
+
+            </div>
         </section>
 
         <script type="module" src="./js/main.js"></script>
