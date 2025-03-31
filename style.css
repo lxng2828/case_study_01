@@ -185,7 +185,14 @@ button:hover {
     padding: 20px;
 }
 
-#stopwatch button {
+#stopwatch-btn-c  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+#stopwatch-btn-c button {
+    width: 49%;
     background-color: #a35858;
 }
 
@@ -202,7 +209,7 @@ button:hover {
 #laps p {
     text-align: start;
     font-size: 16px;
-    color: #f8f9fa;
+    color: #afa4a4;
     width: 25%;
     height: 25%;
 }
@@ -212,6 +219,6 @@ button:hover {
     text-align: center;
     font-size: 60px;
     background: transparent;
-    color: #f8f9fa;
+    color: #afa4a4;
     width: 100%;
 }
