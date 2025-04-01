@@ -17,18 +17,20 @@ class Stopwatch {
         this.resetBtn.addEventListener("click", this.reset.bind(this));
         this.lapBtn.addEventListener("click", this.recordLap.bind(this));
 
-        this.updateDisplay();
+        this.updateUI();
     }
 
     start() {
-        if (!this.running) {
-            this.running = true;
-            this.interval = setInterval(function () {
-                this.timerCount++;
-                this.updateDisplay();
-            }.bind(this), 1000);
+        if (this.running) {
+            return;
         }
+        this.running = true;
+        this.interval = setInterval(function () {
+            this.timerCount++;
+            this.updateUI();
+        }.bind(this), 1000);
     }
+
 
     pause() {
         if (this.running) {
@@ -42,7 +44,7 @@ class Stopwatch {
         this.timerCount = 0;
         this.laps = [];
         this.lapsContainer.innerHTML = "";
-        this.updateDisplay();
+        this.updateUI();
     }
 
     recordLap() {
@@ -56,25 +58,25 @@ class Stopwatch {
         this.lapsContainer.innerHTML = lapsContent;
     }
 
-    updateDisplay() {
+    updateUI() {
         this.display.innerText = this.formatTime(this.timerCount);
     }
 
     formatTime(seconds) {
-        let hours = Math.floor(seconds / 3600);
-        let minutes = Math.floor((seconds % 3600) / 60);
-        let remainingSeconds = seconds % 60;
+        let h = Math.floor(seconds / 3600);
+        let m = Math.floor((seconds % 3600) / 60);
+        let s = seconds % 60;
 
-        if (hours < 10) {
-            hours = "0" + hours;
+        if (h < 10) {
+            h = "0" + h;
         }
-        if (minutes < 10) {
-            minutes = "0" + minutes;
+        if (m < 10) {
+            m = "0" + m;
         }
-        if (remainingSeconds < 10) {
-            remainingSeconds = "0" + remainingSeconds;
+        if (s < 10) {
+            s = "0" + s;
         }
-        return `${hours}:${minutes}:${remainingSeconds}`;
+        return `${h}:${m}:${s}`;
     }
 }
 

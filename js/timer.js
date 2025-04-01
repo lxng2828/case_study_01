@@ -23,7 +23,7 @@ class Timer {
         if (this.running) return;
         this.running = true;
 
-        this.interval = setInterval(function() {
+        this.interval = setInterval(function () {
             if (this.countdownLeft > 0) {
                 this.countdownLeft--;
                 this.updateUI();
@@ -50,18 +50,14 @@ class Timer {
     }
 
     updateUI() {
-        let minutes = Math.floor(this.countdownLeft / 60);
-        let seconds = this.countdownLeft % 60;
-        if (seconds < 10) {
-            this.result.value = `${minutes}:0${seconds}`;
+        let m = Math.floor(this.countdownLeft / 60);
+        let s = this.countdownLeft % 60;
+        if (s < 10) {
+            this.result.value = `${m}:0${s}`;
         } else {
-            this.result.value = `${minutes}:${seconds}`;
+            this.result.value = `${m}:${s}`;
         }
-        if (seconds < 10) {
-            this.result.value = `${minutes}:0${seconds}`;
-        } else {
-            this.result.value = `${minutes}:${seconds}`;
-        }
+
         this.counter.innerText = this.cycleCount;
     }
 }
