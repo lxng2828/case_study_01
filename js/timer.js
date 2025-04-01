@@ -13,7 +13,7 @@ class Timer {
         this.cycleCount = 0;
 
         this.startBtn.addEventListener("click", this.start.bind(this));
-        this.pauseBtn.addEventListener("click", this.stop.bind(this));
+        this.pauseBtn.addEventListener("click", this.pause.bind(this));
         this.resetBtn.addEventListener("click", this.reset.bind(this));
 
         this.updateUI();
@@ -28,7 +28,7 @@ class Timer {
                 this.countdownLeft--;
                 this.updateUI();
             } else {
-                this.stop();
+                this.pause();
                 console.log("Time's up!");
                 new Audio("./assets/bell.mp3").play();
                 this.cycleCount++;
@@ -37,14 +37,14 @@ class Timer {
         }.bind(this), 1000);
     }
 
-    stop() {
+    pause() {
         clearInterval(this.interval);
         this.interval = null;
         this.running = false;
     }
 
     reset() {
-        this.stop();
+        this.pause();
         this.countdownLeft = this.countdownTime;
         this.updateUI();
     }
